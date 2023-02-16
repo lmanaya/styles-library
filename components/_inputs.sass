@@ -1,0 +1,113 @@
+// INPUTS
+.input
+    input
+        height: $height-input
+        border-radius: $border-radius-input
+        padding: $padding-input
+        font-family: $font-family
+        background-color: $background-color-input
+        border: solid 2px $border-color-input
+        color: $color-input
+        outline: 0px
+        transition: $transition
+        margin-bottom: 4px
+        width: -webkit-fill-available
+
+        &:hover:not(:disabled):not(:focus-visible), &.hover
+            border: solid 2px $border-color-input-hover
+
+        &:focus:not(:disabled), &.focus
+            border: solid 2px $border-color-input-focus
+
+        &:disabled
+            opacity: .5
+
+    &.success
+        input
+            border-color: $success-color
+
+            &:hover:not(:disabled):not(:focus-visible), &.hover
+                border: solid 2px $success-color-light
+
+            &:focus:not(:disabled), &.focus
+                border: solid 2px $success-color-dark
+
+    &.error
+        input
+            border-color: $error-color
+
+            &:hover:not(:disabled):not(:focus-visible), &.hover
+                border: solid 2px $error-color-light
+
+            &:focus:not(:disabled), &.focus
+                border: solid 2px $error-color-dark
+
+// TEXTAREAs
+.textarea
+    textarea
+        height: $height-textarea
+        border-radius: $border-radius-input
+        padding: $padding-textarea
+        font-family: $font-family
+        background-color: $background-color-input
+        border: solid 2px $border-color-input
+        color: $color-input
+        outline: 0px
+        transition: $transition
+        margin-bottom: 4px
+        width: -webkit-fill-available
+
+        &:hover:not(:disabled):not(:focus-visible), &.hover
+            border: solid 2px $border-color-input-hover
+
+        &:focus:not(:disabled), &.focus
+            border: solid 2px $border-color-input-focus
+
+        &:disabled
+            opacity: .5
+
+    &.success
+        textarea
+            border-color: $success-color
+
+            &:hover:not(:disabled):not(:focus-visible), &.hover
+                border: solid 2px $success-color-light
+
+            &:focus:not(:disabled), &.focus
+                border: solid 2px $success-color-dark
+
+    &.error
+        textarea
+            border-color: $error-color
+
+            &:hover:not(:disabled):not(:focus-visible), &.hover
+                border: solid 2px $error-color-light
+
+            &:focus:not(:disabled), &.focus
+                border: solid 2px $error-color-dark
+
+// INPUTS AND TEXTAREAS
+.input, .textarea
+    min-width: 100px
+    max-width: 600px
+    width: 100%
+
+    &__label
+        @include fs-text-small
+        display: block
+        margin-bottom: 4px
+        color: $font-size-color
+
+    &__message
+        @include fs-text-small
+        text-align: right
+        color: $border-color-input-hover
+        font-weight: 500
+
+    &.success
+        .input__message, .textarea__message
+            color: $success-color
+
+    &.error
+        .input__message, .textarea__message
+            color: $error-color

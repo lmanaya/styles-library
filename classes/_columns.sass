@@ -1,0 +1,22 @@
+// COLUMNS
+$sizes: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12
+.columns
+    display: flex
+    flex-wrap: wrap
+    width: 100%
+    height: 100%
+
+.column
+    padding: 5px
+
+@each $size in $sizes
+    .column-#{$size}
+        width: #{$size * calc(100% / 12)}
+        flex: none
+
+@each $key, $value in $devices
+    @include media-query($value)
+        @each $size in $sizes
+            .column-#{$size}-#{$key}
+                width: #{$size * calc(100% / 12)}
+                flex: none

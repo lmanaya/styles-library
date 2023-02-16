@@ -1,0 +1,40 @@
+// DISPLAY
+.display-none
+    display: none
+.display-flex
+    display: flex
+.display-block
+    display: block
+
+@each $key, $value in $devices
+    .display-none-#{$key}
+        @include media-query($value)
+            display: none
+
+    .display-flex-#{$key}
+        @include media-query($value)
+            display: flex
+
+    .display-block-#{$key}
+        @include media-query($value)
+            display: block
+
+// TEXT TRANSFORMATION
+.text-uppercase
+    text-transform: uppercase
+
+.text-capitalize
+    text-transform: capitalize
+
+.text-initial
+    text-transform: initial
+
+// TEXT ALINEATION
+.text-center
+    text-align: center
+
+.text-left
+    text-align: left
+
+.text-right
+    text-align: right

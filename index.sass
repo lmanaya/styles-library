@@ -1,0 +1,57 @@
+@import './utilities/variables'
+@import './utilities/media-queries'
+
+@import './classes/flex'
+@import './classes/columns'
+@import './classes/general'
+
+@import './components/typography'
+@import './components/font-sizes'
+@import './components/buttons'
+@import './components/inputs'
+@import './components/radio-checkbox-inputs'
+@import './components/indentation'
+
+body
+    font-family: $font-family
+    margin: 30px
+    background-color: $background-color
+    color: $font-size-color
+    min-width: $min-width-device
+    max-width: $max-width-device
+    box-sizing: border-box
+    @include media-query($max-width-device)
+        margin: 30px auto
+
+h1, h2, h3, h4, h5, h6, p
+    margin: 0px
+
+p, div
+    @include fs-text
+
+div
+    box-sizing: border-box
+
+
+button
+    font-family: $font-family
+    @include fs-text
+    font-weight: 500
+
+    &.button--small
+        @include fs-text-small
+
+    &.button--large
+        @include fs-text-large
+
+.card
+    border: solid 1px $border-color
+    background-color: $border-color
+    padding: 30px
+    border-radius: 10px
+    &.white-card
+        background-color: $white
+
+    &.card-mw-800
+        width: 100%
+        max-width: 800px

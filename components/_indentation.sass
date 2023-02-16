@@ -1,0 +1,7 @@
+$sizes: 1, 2, 3, 4, 5, 6, 7
+
+@each $size in $sizes
+    .indt-#{$size}n
+        margin-bottom: #{$size * $base-indentation}
+        &-top
+            margin-top: #{$size * $base-indentation}

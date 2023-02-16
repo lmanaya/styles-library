@@ -1,0 +1,106 @@
+// FONT FAMILY
+$font-family: 'Poppins', sans-serif
+
+// COLORS
+$primary-color:         #56BE89
+$primary-color-light:   #a9e3c5
+$primary-color-dark:    #198d51
+
+$secondary-color:       #FA991C
+$secondary-color-light: #f8bc6f
+$secondary-color-dark:  #cd780a
+
+$auxiliar-color:        #3b42c2
+$auxiliar-color-light:  #676ef9
+$auxiliar-color-dark:   #282ea1
+
+$success-color:         #56BE89
+$success-color-light:   #a9e3c5
+$success-color-dark:    #198d51
+
+$error-color:           #ff5950
+$error-color-light:     #ff7a73
+$error-color-dark:      #e14038
+
+$black:                 #000000
+$white:                 #ffffff
+
+$gray:                  #d2d2d2
+$gray-light:            #f2f2f2
+$gray-dark:             #a1a1a1
+
+$white-200:             #ffffff20
+$black-100:             #00000010
+$gray-300:              #d2d2d230
+
+:root
+    --background-color:         #{$white}
+    --font-size-color:          #{$black}
+    --border-color:             #{$black-100}
+
+    --background-color-input:   transparent
+    --border-color-input:       #{$gray}
+    --border-color-input-focus: #{$auxiliar-color-light}
+
+body[data-theme="dark"]
+    --background-color:         #{$black}
+    --font-size-color:          #{$white}
+    --border-color:             #{$white-200}
+
+    --background-color-input:   #{$gray-300}
+    --border-color-input:       #{$gray-300}
+    --border-color-input-focus: #{$white}
+
+$background-color: #{var(--background-color)}
+$font-size-color: #{var(--font-size-color)}
+$border-color: #{var(--border-color)}
+
+// INPUTS AND TEXTAREAS
+$background-color-input: #{var(--background-color-input)}
+$border-color-input: #{var(--border-color-input)}
+$border-color-input-focus: #{var(--border-color-input-focus)}
+$border-color-input-hover: $gray-dark
+$color-input: $font-size-color
+
+$height-input: 35px
+$border-radius-input: 8px
+$padding-input: 0px 25px
+$padding-textarea: 10px 25px
+$height-textarea: 100px
+
+// BUTTONS
+$height-button: 35px
+$height-small-button: 30px
+$height-large-button: 40px
+
+$size-svg-button: 25px
+$size-small-svg-button: 20px
+$size-large-svg-button: 30px
+
+$padding-icon-button: 9px
+$padding-small-icon-button: 8px
+$padding-large-icon-button: 10px
+
+$gap-button-icon: 8px
+$border-radius-button: 8px
+$padding-button: 0px 16px
+$border-weight-button: 2px
+$disabled-opacity-button: .5
+
+// TRANSITIONS
+$transition: all ease-in-out .3s
+
+// INDENTATION
+$base-indentation: 8px
+
+//DEVICES
+$min-width-device: 300px
+$max-width-device: 1900px
+
+$mobile-lg: 500px
+$tablet: 768px
+$desktop: 968px
+$desktop-md: 1200px
+$desktop-lg: 1500px
+
+$devices: (mobile-lg: $mobile-lg, tablet: $tablet, desktop: $desktop, desktop-md: $desktop-md, desktop-lg: $desktop-lg)

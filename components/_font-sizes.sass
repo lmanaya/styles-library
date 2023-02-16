@@ -1,0 +1,53 @@
+@mixin fs-title
+    font-size: 40px
+    line-height: 56px
+
+@mixin fs-title-large
+    font-size: 56px
+    line-height: 72px
+
+@mixin fs-subtitle
+    font-size: 26px
+    line-height: 32px
+
+@mixin fs-subtitle-large
+    font-size: 28px
+    line-height: 40px
+
+@mixin fs-text
+    font-size: 14px
+    line-height: 20px
+
+@mixin fs-text-large
+    font-size: 16px
+    line-height: 27px
+
+@mixin fs-text-small
+    font-size: 12px
+    line-height: 16px
+
+
+.title
+    @include fs-title
+    font-weight: 700
+
+.title-large
+    @include fs-title-large
+    font-weight: 700
+
+.subtitle
+    @include fs-subtitle
+    font-weight: 600
+
+.subtitle-large
+    @include fs-subtitle-large
+    font-weight: 600
+
+.text
+    @include fs-text
+
+.text-large
+    @include fs-text-large
+
+.text-small
+    @include fs-text-small

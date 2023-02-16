@@ -1,0 +1,245 @@
+// DEFAULT BUTTON
+button
+    background-color: $gray
+    color: $black
+    border-radius: $border-radius-button
+    height: $height-button
+    padding: $padding-button
+    cursor: pointer
+    border: none
+    transition: $transition
+    min-width: 100px
+
+    &:hover:not(:disabled), &.hover
+        background-color: $gray-dark
+        color: $white
+
+    &:disabled
+        opacity: $disabled-opacity-button
+
+    &.button--small
+        height: $height-small-button
+
+    &.button--large
+        height: $height-large-button
+
+    &.button--outline
+        background-color: transparent
+        color: $gray
+        border: solid $border-weight-button $gray
+
+        &:hover:not(:disabled), &.hover
+            background-color: $gray-light
+            border-color: $gray-light
+            color: $black
+
+    &.button--transparent
+        background-color: transparent
+        color: $gray
+
+        &:hover:not(:disabled), &.hover
+            background-color: $gray-light
+            color: $gray-dark
+
+// ICON BUTTON
+.button-icon
+    min-width: 100px
+    display: flex
+    flex-wrap: nowrap
+    align-items: center
+    justify-content: center
+    gap: $gap-button-icon
+
+    .button__svg
+        display: block
+        width: $size-svg-button
+        height: $size-svg-button
+        transition: $transition
+        fill: $black
+
+    &:hover:not(:disabled), &.hover
+        .button__svg
+            fill: $white
+
+    &.button--small
+        .button__svg
+            width: $size-small-svg-button
+            height: $size-small-svg-button
+
+        &.button-icon--no-text
+            padding: $padding-small-icon-button
+
+            .button__svg
+                width: 100%
+                height: 100%
+
+            &.button-icon--rounded
+                width: $height-small-button
+
+    &.button--large
+        .button__svg
+            width: $size-large-svg-button
+            height: $size-large-svg-button
+
+        &.button-icon--no-text
+            padding: $padding-large-icon-button
+
+            .button__svg
+                width: 100%
+                height: 100%
+
+            &.button-icon--rounded
+                width: $height-large-button
+
+    &--no-text
+        min-width: auto
+        display: block
+        padding: $padding-icon-button
+
+        .button__svg
+            width: 100%
+            height: 100%
+
+        &.button-icon--rounded
+            border-radius: 50%
+            width: $height-button
+
+    &.button--outline
+        .button__svg
+            fill: $gray
+
+        &:hover:not(:disabled), &.hover
+            .button__svg
+                fill: $black
+
+        &.button-icon--no-text
+            padding: #{$padding-icon-button - 2px}
+
+            &.button--small
+                padding: #{$padding-small-icon-button - 2px}
+
+            &.button--large
+                padding: #{$padding-large-icon-button - 2px}
+
+    &.button--transparent
+        .button__svg
+            fill: $gray
+
+        &:hover:not(:disabled), &.hover
+            .button__svg
+                fill: $gray-dark
+
+// PRIMARY BUTTON
+.button-primary
+    background-color: $primary-color
+
+    &:hover:not(:disabled), &.hover
+        background-color: $primary-color-dark
+
+    &.button--outline
+        background-color: transparent
+        color: $primary-color
+        border: solid $border-weight-button $primary-color
+
+        .button__svg
+            fill: $primary-color
+
+        &:hover:not(:disabled), &.hover
+            background-color: $primary-color-light
+            color: $black
+            border-color: $primary-color-light
+
+            .button__svg
+                fill: $black
+
+    &.button--transparent
+        background-color: transparent
+        color: $primary-color
+
+        .button__svg
+            fill: $primary-color
+
+        &:hover:not(:disabled), &.hover
+            background-color: $primary-color-light
+            color: $primary-color-dark
+
+            .button__svg
+                fill: $primary-color-dark
+
+// SECONDARY BUTTON
+.button-secondary
+    background-color: $secondary-color
+
+    &:hover:not(:disabled), &.hover
+        background-color: $secondary-color-dark
+
+    &.button--outline
+        background-color: transparent
+        color: $secondary-color
+        border: solid $border-weight-button $secondary-color
+
+        .button__svg
+            fill: $secondary-color
+
+        &:hover:not(:disabled), &.hover
+            background-color: $secondary-color-light
+            color: $black
+            border-color: $secondary-color-light
+
+            .button__svg
+                fill: $black
+
+    &.button--transparent
+        background-color: transparent
+        color: $secondary-color
+
+        .button__svg
+            fill: $secondary-color
+
+        &:hover:not(:disabled), &.hover
+            background-color: $secondary-color-light
+            color: $secondary-color-dark
+
+            .button__svg
+                fill: $secondary-color-dark
+
+// AUXILIAR BUTTON
+.button-auxiliar
+    background-color: $auxiliar-color
+    color: $white
+
+    .button__svg
+        fill: $white
+
+    &:hover:not(:disabled), &.hover
+        background-color: $auxiliar-color-dark
+
+    &.button--outline
+        background-color: transparent
+        color: $auxiliar-color
+        border: solid $border-weight-button $auxiliar-color
+
+        .button__svg
+            fill: $auxiliar-color
+
+        &:hover:not(:disabled), &.hover
+            background-color: $auxiliar-color-light
+            color: $black
+            border-color: $auxiliar-color-light
+
+            .button__svg
+                fill: $black
+
+    &.button--transparent
+        background-color: transparent
+        color: $auxiliar-color
+
+        .button__svg
+            fill: $auxiliar-color
+
+        &:hover:not(:disabled), &.hover
+            background-color: $auxiliar-color-light
+            color: $auxiliar-color-dark
+
+            .button__svg
+                fill: $auxiliar-color-dark

@@ -1,0 +1,124 @@
+// RADIO BUTTONS & CHECKBOX
+.radio, .checkbox
+    &__label
+        &:hover:not(:disabled), &.hover
+            .radio__span, .checkbox__span
+                border: solid 2px $gray-dark
+
+                .radio__svg, .checkbox__svg
+                    fill: $gray-dark
+
+    &__span
+        width: 15px
+        height: 15px
+        display: block
+        padding: 2px
+        border: solid 2px $gray
+        transition: $transition
+
+        .radio__svg, .checkbox__svg
+            width: 100%
+            height: 100%
+            fill: $gray
+            transition: $transition
+
+    input
+        opacity: 0
+        visibility: hidden
+        width: 0px
+        margin: 0px
+        position: absolute
+
+        &:checked + .radio__label > .radio__span, &:checked + .checkbox__label > .checkbox__span
+            border: solid 2px $primary-color
+            background-color: $primary-color
+
+        &:checked + .radio__label > .radio__span > .radio__svg, &:checked + .checkbox__label > .checkbox__span > .checkbox__svg
+            fill: $white
+
+        &:disabled + .radio__label, &:disabled + .checkbox__label
+            opacity: .5
+
+        &:disabled + .radio__label > .radio__span, &:disabled + .checkbox__label > .checkbox__span
+            border: solid 2px $gray
+
+        &:disabled + .radio__label > .radio__span > .radio__svg, &:disabled + .checkbox__label > .checkbox__span > .checkbox__svg
+            fill: $gray
+
+// RADIO BUTTONS
+.radio
+    &__span
+        border-radius: 50%
+
+// CHECKBOX
+.checkbox
+    &__span
+        border-radius: 5px
+
+// SWITCH TOGGLE
+$swith-width: 50px
+$swith-height: 28px
+$swith-padding: 4px
+$swith-button-size: #{$swith-height - 2 * $swith-padding}
+$swith-button-transition: calc(#{$swith-width} - #{2 * $swith-padding} - #{$swith-button-size})
+
+.switch
+    input
+        opacity: 0
+        visibility: hidden
+        width: 0px
+        margin: 0px
+        position: absolute
+
+        &:checked + .switch__label
+            background-color: $primary-color
+
+        &:checked + .switch__label > .switch__span
+            &::before
+                transform: translateX(#{$swith-button-transition})
+
+        &:checked + .switch__label > .switch__svg
+            fill: $white
+
+        &:disabled + .switch__label
+            opacity: .5
+
+    &__label
+        width: $swith-width
+        height: $swith-height
+        position: relative
+        border-radius: $swith-button-size
+        background-color: $gray
+        transition: $transition
+
+    &__svg
+        position: absolute
+        top: 0
+        bottom: 0
+        margin: auto
+        left: calc(#{$swith-padding} + #{$swith-padding * .5})
+        width: calc(#{$swith-button-size} - #{$swith-padding})
+        height: calc(#{$swith-button-size} - #{$swith-padding})
+        fill: transparent
+        transition: $transition
+
+    &__span
+        position: absolute
+        background-color: transparent
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+
+        &::before
+            content: ""
+            position: absolute
+            width: $swith-button-size
+            height: $swith-button-size
+            background-color: $white
+            border-radius: 50%
+            left: $swith-padding
+            top: 0
+            bottom: 0
+            margin: auto
+            transition: $transition
