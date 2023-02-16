@@ -1,0 +1,19 @@
+{
+  "name": "styles-library",
+  "version": "1.0.0",
+  "description": "CSS styles using SASS to components creation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lmanaya/styles-library.git"
+  },
+  "author": "lmanaya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lmanaya/styles-library/issues"
+  },
+  "homepage": "https://github.com/lmanaya/styles-library#readme"
+}
